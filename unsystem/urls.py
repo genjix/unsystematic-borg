@@ -7,7 +7,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url("^$", direct_to_template, {"template": "home.html"}),
+    ("^$", direct_to_template, {"template": "home.html"}),
     # Examples:
     # url(r'^$', 'unsystem.views.home', name='home'),
     # url(r'^unsystem/', include('unsystem.foo.urls')),

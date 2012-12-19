@@ -1,2 +1,76 @@
-hello
+{% extends "base.html" %}
+{% block content %}
+<div class="section intro">
+    <img id="nyancat" src="{{ STATIC_URL }}site/nyancat.png">
+    <div>
+        <h2>Vienna</h2>
+        <h2 class="last">1-3 November 2013</h2>
+
+        <p>The world's best <del>Bitcoin</del> conference.</p>
+        <p>See last year's <a href="http://bitcoin2012.com/">videos!</a></p>
+        <p>Bitcoin symbolises a new era for humanity.
+        A sudden twist in our storyline. We are driving the spaceship now.</p>
+        <p>We wait your tables, grow your food, teach your children,
+        fix your computers, drive your taxis, and write your news.</p>
+        <p>Together we can accomplish something real.</p>
+        <p>We are anonymous and everywhere. United as one. Divided by zero.</p>
+    </div>
+</div><!-- /end .section.intro -->
+
+<div class="section main">
+    <h2><b>Speakers</b></h2>
+    <p><a href="">Click!</a> for detailed bios.</p>
+    <p>This site is a preview! Stallman and Kurtz have yet to confirm to anything. We're still locking down the final dates.</p>
+    <ol>
+        <li class="figure start2">
+            <a href="http://en.wikipedia.org/wiki/Silk_Road_%28marketplace%29">
+                <img src="{{ STATIC_URL }}ppl/silkroad.jpg" alt="">
+                <span class="figcaption">The <b>Silk Road</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure end2">
+            <a href="http://en.wikipedia.org/wiki/Richard_stallman">
+                <img src="{{ STATIC_URL }}ppl/stallman.jpg" alt="">
+                <span class="figcaption">Richard <b>Stallman</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure start2 end3">
+            <a href="http://en.wikipedia.org/wiki/Max_Keiser">
+                <img src="{{ STATIC_URL }}ppl/keiser.jpg" alt="">
+                <span class="figcaption">Max <b>Keiser</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure end2">
+            <a href="http://en.wikipedia.org/wiki/Jaromil">
+                <img src="{{ STATIC_URL }}ppl/jaromil.jpg" alt="">
+                <span class="figcaption">Denis Roio <b>"jaromil"</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure start2">
+            <a href="http://en.wikipedia.org/wiki/Birgitta_J%C3%B3nsd%C3%B3ttir">
+                <img src="{{ STATIC_URL }}ppl/jonsdottir.jpg" alt="">
+                <span class="figcaption">Birgitta <b>Jónsdóttir</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure end2 end3 end6">
+            <a href="http://en.wikipedia.org/wiki/Steve_Kurtz">
+                <img src="{{ STATIC_URL }}ppl/kurtz.jpg" alt="">
+                <span class="figcaption">Steve <b>Kurtz</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure start2">
+            <a href="http://en.wikipedia.org/wiki/Mike_Gogulski">
+                <img src="{{ STATIC_URL }}ppl/gogulski.jpg" alt="">
+                <span class="figcaption">Mike <b>Gogulski</b></span>
+            </a>
+        </li><!-- /end .figure -->
+        <li class="figure end2">
+            <a href="http://en.wikipedia.org/wiki/Nina_Paley">
+                <img src="{{ STATIC_URL }}ppl/paley.jpg" alt="">
+                <span class="figcaption">Nina <b>Paley</b></span>
+            </a>
+        </li><!-- /end .figure -->
+    </ol>
+</div><!-- /end .section.main -->
+{% endblock %}
 
