@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block intro %}
+{% if created %}
+    <p>Successful registration. Please check your email to confirm your account.</p>
+{% else %}
+    {% if form.errors %}
+        <p class="error">Please correct the error{{ form.errors|pluralize }} below.</p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>{{ form.as_table }}</table>
+        <input type="submit" value="Submit">
+    </form>
+{% endif %}
+{% endblock %}
