@@ -8,6 +8,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     ("^$", direct_to_template, {"template": "home.html"}),
+    ("^tickets/$", direct_to_template, {"template": "tickets.html"}),
+    ("^info/$", direct_to_template, {"template": "info.html"}),
+    ("^contact/$", direct_to_template, {"template": "contact.html"}),
+    ("^bio/$", direct_to_template, {"template": "bios.html"}),
     # Examples:
     # url(r'^$', 'unsystem.views.home', name='home'),
     # url(r'^unsystem/', include('unsystem.foo.urls')),
