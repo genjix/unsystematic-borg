@@ -27,5 +27,5 @@ class Ticket(models.Model):
     paypal_email = models.EmailField(blank=True)
     sepa_code = models.CharField(max_length=8, editable=False)
     ticket_code = models.CharField(max_length=6, editable=False)
-    paid = models.BooleanField(default=False)
+    active = models.BooleanField(default=False)
 

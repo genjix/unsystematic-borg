@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.signals import user_logged_in
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from unsystem.forms import RegistrationForm, ProfileForm
@@ -67,7 +68,6 @@ def profile(request):
     if request.method == "POST":
         form = ProfileForm(request.POST)
         if form.is_valid():
-            # leave message
             profile = request.user.get_profile()
             profile.organization = form.instance.organization
             profile.website = form.instance.website
@@ -75,7 +75,15 @@ def profile(request):
             profile.bio = form.instance.bio
             profile.contact = form.instance.contact
             profile.save()
+            messages.info(request, "Changes saved to profile.")
     else:
         form = ProfileForm(instance=request.user.get_profile())
     return render(request, "profile.html", {"form": form})
+
+def tickets(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect("/login/")
+    # request ticket
+    # email sent with instructions
+    # activates when payment is received
 
