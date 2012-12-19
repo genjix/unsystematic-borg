@@ -15,6 +15,9 @@ class UserProfile(models.Model):
     photo = models.ImageField(upload_to="photos", null=True, blank=True)
     contact = models.TextField(blank=True)
 
+    def __unicode__(self):
+        return self.user.username
+
 class Talk(models.Model):
     # A user can register multiple talks
     user_profile = models.ForeignKey(UserProfile, editable=False)
