@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+migrations/
+.gitignore
+settings.py
+

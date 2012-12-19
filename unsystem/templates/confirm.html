@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block intro %}
+{% if expired %}
+    <p class="error">Expired registration! Please re-register <a href="/register/">here</a>.</p>
+{% endif %}
+{% if success %}
+    <p>Successfully registered! Please <a href="/login/">login</a> to continue.</p>
+{% endif %}
+{% endblock %}
