@@ -27,7 +27,6 @@ def home(request):
             tags.append("end3")
         if i % 6 == 0:
             tags.append("end6")
-        print tags
         tagged_speakers.append(list(speaker) + [" ".join(tags)])
     return render(request, "home.html", {"speakers": tagged_speakers})
 
