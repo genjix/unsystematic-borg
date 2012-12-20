@@ -5,54 +5,14 @@
     <p><a href="/bio/">Click!</a> for detailed bios.</p>
     <p>This site is a preview! Stallman and Kurtz have yet to confirm to anything. We're still locking down the final dates.</p>
     <ol>
-        <li class="figure start2">
-            <a href="http://en.wikipedia.org/wiki/Silk_Road_%28marketplace%29">
-                <img src="{{ STATIC_URL }}ppl/silkroad.jpg" alt="">
-                <span class="figcaption">The <b>Silk Road</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure end2">
-            <a href="http://en.wikipedia.org/wiki/Richard_stallman">
-                <img src="{{ STATIC_URL }}ppl/stallman.jpg" alt="">
-                <span class="figcaption">Richard <b>Stallman</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure start2 end3">
-            <a href="http://en.wikipedia.org/wiki/Max_Keiser">
-                <img src="{{ STATIC_URL }}ppl/keiser.jpg" alt="">
-                <span class="figcaption">Max <b>Keiser</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure end2">
-            <a href="http://en.wikipedia.org/wiki/Jaromil">
-                <img src="{{ STATIC_URL }}ppl/jaromil.jpg" alt="">
-                <span class="figcaption">Denis Roio <b>"jaromil"</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure start2">
-            <a href="http://en.wikipedia.org/wiki/Birgitta_J%C3%B3nsd%C3%B3ttir">
-                <img src="{{ STATIC_URL }}ppl/jonsdottir.jpg" alt="">
-                <span class="figcaption">Birgitta <b>Jónsdóttir</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure end2 end3 end6">
-            <a href="http://en.wikipedia.org/wiki/Defense_Distributed">
-                <img src="{{ STATIC_URL }}ppl/wilson.jpg" alt="">
-                <span class="figcaption">Cody <b>Wilson</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure start2">
-            <a href="http://en.wikipedia.org/wiki/Mike_Gogulski">
-                <img src="{{ STATIC_URL }}ppl/gogulski.jpg" alt="">
-                <span class="figcaption">Mike <b>Gogulski</b></span>
-            </a>
-        </li><!-- /end .figure -->
-        <li class="figure end2">
-            <a href="http://en.wikipedia.org/wiki/Nina_Paley">
-                <img src="{{ STATIC_URL }}ppl/paley.jpg" alt="">
-                <span class="figcaption">Nina <b>Paley</b></span>
-            </a>
-        </li><!-- /end .figure -->
+        {% for speaker in speakers %}
+            <li class="figure {{ speaker.4 }}">
+                <a href="{{ speaker.3 }}">
+                    <img src="{{ STATIC_URL }}ppl/{{ speaker.2 }}" alt="">
+                    <span class="figcaption">{{ speaker.0 }} <b>{{ speaker.1 }}</b></span>
+                </a>
+            </li>
+        {% endfor %}
     </ol>
 </div><!-- /end .section.main -->
 {% endblock %}

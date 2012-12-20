@@ -8,10 +8,28 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from unsystem.forms import RegistrationForm, ProfileForm
 from unsystem.models import UserProfile
+from unsystem.speakers import speakers
 
 import datetime
 import hashlib
 import random
+
+def home(request):
+    tagged_speakers = []
+    for i, speaker in enumerate(speakers):
+        tags = []
+        i += 1
+        if i % 2 == 1:
+            tags.append("start2")
+        else:
+            tags.append("end2")
+        if i % 3 == 0:
+            tags.append("end3")
+        if i % 6 == 0:
+            tags.append("end6")
+        print tags
+        tagged_speakers.append(list(speaker) + [" ".join(tags)])
+    return render(request, "home.html", {"speakers": tagged_speakers})
 
 def create_inactive_user(form):
     username = form.cleaned_data["username"]

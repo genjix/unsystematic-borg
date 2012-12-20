@@ -8,7 +8,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    ("^$", direct_to_template, {"template": "home.html"}),
+    ("^$", home),
     ("^register/$", register),
     ("^confirm/([0-9a-f]{64})$", confirm),
     ("^login/$", login, {"template_name": "login.html"}),
