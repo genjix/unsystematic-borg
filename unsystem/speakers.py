@@ -29,5 +29,8 @@ speakers = (
 
     ("Mitch", "Altman", "altman.jpg",
      "http://en.wikipedia.org/wiki/Mitch_Altman"),
+
+    ("Amir", "Taaki", "taaki.jpg",
+     "http://en.wikipedia.org/wiki/Amir_Taaki"),
 )
 
