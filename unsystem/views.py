@@ -103,4 +103,5 @@ def tickets(request):
     # request ticket
     # email sent with instructions
     # activates when payment is received
+    return render(request, "tickets.html")
 
